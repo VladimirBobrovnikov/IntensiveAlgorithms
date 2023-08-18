@@ -1,14 +1,18 @@
 from typing import List
 from collections import defaultdict
+
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
 
+
 class Solution:
     dict_data = defaultdict(list)
     visited = set()
+
     def build_dict(self, noda: TreeNode):
         if noda.left:
             self.dict_data[noda.val].append(noda.left.val)
